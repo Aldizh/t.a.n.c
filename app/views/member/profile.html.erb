@@ -1,0 +1,29 @@
+<div id="wrap" class="profile">
+  <h3>Welcome, <%= @user_data[:first] + " " + @user_data[:last] + " La!" %></h3>
+  <% if @user_data[:type] == 'tibetan' || @user_data[:type] == 'spouseoftibetan' %>
+    <%= link_to('Edit your Profile', '/member/edit_member_profile', :id => "edit_profile") %><br>
+  <% elsif @user_data[:type] == 'non_member' %>
+    <%= link_to('Edit your Profile', '/member/edit_non_member_profile', :id => "edit_profile") %><br>
+  <% end %>
+  <% if @admin == true %>
+   <%= link_to('Manage Database', '/member/admin') %><br>
+  <% end %>
+  <% if @user_data[:type] == 'tibetan' || @user_data[:type] == 'spouseoftibetan'%>
+    <p style="color: #600; text-align: center;"> Thanks for being a member of TANC</p>
+  <% elsif @user_data[:type] == 'non-member' %>
+    <p style="color: #600; text-align: center;"> Thanks for being a friend of TANC</p>
+  <% end %>
+  <table id="profile_table">
+    <tr><td><strong>Name:</strong></td><td> <%= @user_data[:first] + " " + @user_data[:last] %></td></tr>
+    <tr><td><strong>Email:</strong></td><td><%= @user_data[:email] %></td></tr>
+    <tr><td><strong>Address:</strong></td><td> <%= @user_data[:address1] + "," rescue nil %> <%= @user_data[:address2] + "," rescue nil%> <%= @user_data[:city] + ", " + @user_data[:state] + " " + @user_data[:zip] rescue nil %></td></tr>
+    <tr><td><strong>Telephone:</strong></td><td> <%= @user_data[:telephone] rescue nil %></td></tr>
+    <% if !@user_data[:country_of_birth].nil? %>
+      <tr><td><strong>Country of Birth:</strong></td><td><%= @user_data[:country_of_birth] %></td></tr>
+    <% end %>
+    <tr><td><strong>Membership Fee payment status: </strong></td><td><%= @user_data[:status] rescue nil %></td></tr>
+  </table>
+  <div class = "logout">
+    <%= link_to "LOGOUT", :controller=>"application", :action => "destroy" %>
+  </div>
+</div>

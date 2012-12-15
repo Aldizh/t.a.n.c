@@ -1,0 +1,10 @@
+<div id="wrap">
+<h2 class="title">Login/Sign Up</h2>
+<%= form_tag :action => "login" do %>
+      <%= text_field_tag 'email', @email, :placeholder => 'Email' %>
+      <%= password_field_tag 'password', :placeholder => 'Password' %>      
+      <%= submit_tag 'Login' %>
+  <% end %>
+
+<%= link_to "New User Sign up here!", '/member/signup' %>
+</div>

@@ -1,0 +1,24 @@
+  @import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
+a.button{
+		background: #F5C773;
+		border-radius: 10px;
+		padding: 10px 20px;
+		display: block;
+		font-family: arial;
+		font-weight: bold;
+		color:#300;
+		text-decoration: none;
+		text-shadow:0px 1px 0px #fff;
+		border:1px solid #a7a7a7;
+		width: 200px;
+		margin:10px 20px;
+		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+		-webkit-transition:box-shadow 0.5s;
+}
+a.button i{
+		float: right;
+		margin-top: 2px;
+}
+a.button:hover{
+		box-s
+}

@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	width: 800px;
+	margin: auto;
+	font: 12px/1.4 Verdana, sans-serif;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: underline;
+}
+header {
+	margin:0;
+	padding:0;
+}
+h1 {
+	margin:0;
+	padding:0;
+}
+h2 {
+	margin: auto;
+	font-weight: light;
+	font: 14px/1.6 Arial, sans-serif;
+	text-transform: uppercase;
+	color: #A80303;
+	margin-top: 20px;
+	margin-left: 25px;
+	padding-bottom: 5px;
+	border-bottom: 1px #8F8989 dotted;
+	width: 220px;
+}
+
+i {
+	margin-left: 10px;
+}
+h3 {
+	margin: 0 0 5px 0;
+	color: #300;
+}
+
+/* ONLY for HOME PAGE */
+
+#home-page-wrapper {
+	height: 720px;
+}
+#slider {
+	width: 500px;
+	float: right;
+	background: #F5C773;
+	font-size: 11px;
+	margin-top: 2px;
+}
+#slider figcaption {
+	padding: 1px 6px;
+}
+
+/*SIDE BAR */
+
+#side-bar {
+	width: 298px;
+	background: #CADFE0;
+	padding: 10px;
+	float: left;
+	margin-top: 2px;
+	height: 718px;
+}
+
+.side-bar-lists {
+	width: 235px;
+	margin: auto;
+	margin-top: 3px;
+	font: 11px/1.6 Arial, sans-serif;
+}
+.side-bar-lists ul {
+	padding: 0;
+	margin: 0;
+}
+.side-bar-lists li {
+	list-style-type: none;
+	padding: 5px 0;
+}
+.side-bar-lists li a {
+}
+/*END SIDE BAR */
+
+
+
+.home-page-hilite {
+	width: 500px;
+	float: right;
+	padding: 15px 0 15px 15px;
+	text-align: justify;
+	border-bottom: 1px #FF9900 solid;
+}
+.home-page-hilite  img {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+/** FOOTER STYLES **/
+footer {
+	background: #472703;
+	color: #E6DED5;
+	padding: 10px;
+}
+
+address {
+	display: block; 
+	text-align: center;
+	font: 11px/1.6 Arial, sans-serif;
+	letter-spacing: 2px;
+}
+ul#connect {
+	text-align: center;
+	margin-top: 10px;
+}
+#connect li {
+	display: inline;
+	list-style-type: none;
+	text-indent: -9999px;
+}
+#connect li a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+
+#facebook a {
+	background-image: url('../images/facebook2.png');
+	background-repeat: no-repeat;
+}
+#facebook a:hover {
+	background-image: url('../images/facebook1.png');
+}
+#twitter a {
+	background-image: url('../images/twitter2.png');
+	background-repeat: no-repeat;
+}
+#twitter a:hover {
+	background-image: url('../images/twitter1.png');
+}
+#group-21 {
+	font-size: 9px;
+	color: #FFF;
+	text-align: right;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tibetan Association of Northen California</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- HEADER STARTS HERE -->
+  <header>
+    <h1>
+      <img src="/images/logo.jpg" alt="Tibetan Association of Northern California's Logo" />
+    </h1> 
+  </header>
+<!-- HEADER ENDS HERE -->
+<% if flash[:error] %>
+  <div class="error"> <%= flash[:error] %></div>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

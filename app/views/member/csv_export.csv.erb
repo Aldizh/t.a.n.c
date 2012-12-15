@@ -1,0 +1,4 @@
+id,First Name,Last Name,email,age,address1,address2,city,state,zip,telephone,type,
+<% @member_list.each do |m| %>
+<%= m[:id] %>,<%= m[:first] %>,<%= m[:last] %>,<%= m[:email] %>,<%= m[:age] %>,<%= m[:address1] %>,<%= m[:address2] %>,<%= m[:city] %>,<%= m[:state] %>,<%= m[:zip] %>,<%= m[:telephone] %>,<%= m[:type] %>,
+<% end %>

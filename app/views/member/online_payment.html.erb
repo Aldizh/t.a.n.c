@@ -1,0 +1,21 @@
+<div id="wrap" class="check-cash-payment">
+<h3>Thanks for choosing online payment to pay your membership due!</h3>
+Please mail your check to:
+<p> Your online payment will be processed through <strong>Paypal</strong> which is very secure and very easy.</p>
+
+<div class="payment_options" id="paypal">
+		<p> You can use any of your cards (VISA, MASTER, AMEX or DISCOVER). BY click on the payment button below, you will be directed to paypal page. </p>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="DYFN5V9BLLZAQ">
+		<input type="image" src="http://designpala.com/images/pay_online_btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+Please press Done once you finished online payment.
+  <%= form_tag do %> 
+  <%= submit_tag 'Done!' %>
+  <% end %>
+</div>
+
+

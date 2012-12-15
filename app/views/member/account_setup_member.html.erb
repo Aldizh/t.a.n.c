@@ -1,0 +1,36 @@
+<div id="wrap">
+<h2 class="title">Please fill up the following information</h2>
+<p style="text-align: center; font-size: 10px; color: #600;"> <em>* All the fields are required except where it says optional</em> </p>
+<%= form_tag do %>
+  <%= text_field_tag 'first-name', @first, :placeholder => 'First Name' %>
+  <%= text_field_tag 'last-name', @last, :placeholder => 'Last Name' %>
+  Already a Member?
+  <%= select_tag 'already_a_member',  "<option>Yes</option><option>No</option>".html_safe %>
+  <%= text_field_tag 'year_of_birth', @year_of_birth, :placeholder => 'Year of Birth' %>
+  <p>
+    <%= radio_button_tag 'gender', 'male' %>
+    <%= label_tag 'male', 'Male' %>
+  </p>
+  <p>
+    <%= radio_button_tag 'gender', 'female' %>
+    <%= label_tag 'female', 'Female' %>
+  </p>
+
+  <%= text_field_tag 'country_of_birth', @country_of_birth, :placeholder => 'Country of Birth (Optional)' %>
+  Your occupation:
+  <%= select_tag 'occupation', "<option>Student</option><option>Medical Profession</option><option>Business Owner</option><option>Finance and Banking</option><option>Others</option>".html_safe %>
+  <%= text_field_tag 'special_skills', @special_skills, :placeholder => 'Special skills (Optional)' %>
+  Number Of Children:
+  <%= select_tag 'number_of_children', "<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>".html_safe %>
+  <%= text_field_tag 'address-line-1', @address1, :placeholder => 'Address Line 1' %>
+  <%= text_field_tag 'address-line-2', @address2, :placeholder => 'Address Line 2 (Optional)' %>
+  <%= text_field_tag 'city', @city, :placeholder => 'City' %>
+  <%= text_field_tag 'state', @state, :placeholder => 'State' %>
+  <%= text_field_tag 'zip', @zip, :placeholder => 'Zip' %>
+  <%= text_field_tag 'telephone', @telephone, :placeholder => 'Telephone' %>
+  <%= submit_tag 'Continue' %>
+  <%= link_to('Back to log in page', '/member/') %> 
+  <% end %>
+</div>
+
+

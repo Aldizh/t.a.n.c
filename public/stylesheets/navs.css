@@ -1,0 +1,174 @@
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+* { margin: 0; padding: 0; }
+
+/*
+Menu start
+*/
+
+#navwrap {
+	text-transform: uppercase;	
+	font: 14px/1.4 Verdana, sans-serif;
+	z-index: 2;
+	background: #CBDBB2;
+	height: 55px;
+	padding: 5px 0;
+	margin-top: -7px;
+	opacity: 0.9;
+}
+ul.sub-menu {
+	text-transform: none;
+}
+ul.dropdown {
+    list-style: none;
+}
+
+ul.dropdown li a {
+    color: #000;
+    float: left;
+    /*border-bottom: 2px #6684a4 solid;*/
+	height: 45px;
+    background: #97BDB0;		
+}
+
+/* border hover */
+ul.dropdown li a:hover {
+    /*border-bottom: 2px #5e8fb9 solid;*/
+}
+
+ul.dropdown li:hover > a {
+    /*border-bottom: 2px #5e8fb9 solid;*/
+}
+
+ul.dropdown li.current-menu-ancestor > a{
+    /*border-bottom: 2px #5e8fb9 solid;*/
+}
+
+
+/* Styling individual menu items */
+ul.dropdown > li a {
+    width: 65px;
+}
+ul.dropdown > li + li a {
+    width: 90px;
+}
+ul.dropdown > li +li +li a {
+    width: 130px;
+}
+ul.dropdown > li +li +li +li a {
+    width: 90px;
+}
+ul.dropdown > li +li +li +li +li a {
+    width: 80px;
+}
+ul.dropdown > li +li +li +li +li +li a {
+    width: 110px;
+}
+ul.dropdown > li +li +li +li +li +li +li a {
+    width: 120px;
+}
+ul.dropdown > li +li +li +li +li +li +li +li a {
+    width: 80px;
+}
+/* First level menu styling */
+ul.dropdown li{
+    float: left; /* makes horizontal list */
+    position: relative; /* Submenu ULs, appear below! */
+    height: 25px;
+    text-align:center;
+    padding-left: 4px; /* Distance between menu points*/
+
+}
+
+/* Links styling */
+ul.dropdown a {
+    font-size: 9pt;
+    text-decoration:none;
+}
+ul.dropdown li > a {
+	padding: 5px;
+}
+
+ul.dropdown li:hover > a {
+    /*border-bottom: 2px #5e8fb9 solid;*/
+}
+
+/* Styling individual sub-menu items */
+ul.dropdown li:first-child ul {
+    width: 65px;
+}
+
+ul.dropdown li:first-child +li ul {
+    width: 90px;
+}
+
+ul.dropdown li:first-child +li +li ul {
+    width: 130px;
+}
+
+ul.dropdown li:first-child +li +li +li ul {
+    width: 90px;
+}
+ul.dropdown li:first-child +li +li +li +li ul {
+    width: 80px;
+}
+ul.dropdown li:first-child +li +li +li +li +li ul {
+    width: 110px;
+}
+ul.dropdown li:first-child +li +li +li +li +li +li ul {
+    width: 120px;
+}
+ul.dropdown li:first-child +li +li +li +li +li +li +li ul {
+    width: 80px;
+}
+
+ul.dropdown ul {
+    opacity: 0.90;
+    list-style: none;
+    background: #6684a4;
+    margin-top: 45px;
+    /*change top margin if submenu is broken*/
+}
+
+ul.dropdown ul li {
+    width: auto;
+    z-index: 10; /* Make the submenu appear over content*/
+    float:none; /* umm.. Appear below the previous one.*/
+}
+
+ul.dropdown ul li:hover  {
+    background: #FAA507;
+}
+
+ul.dropdown ul li a {
+    padding: 5px;
+    text-align: left;
+    color: #600;
+    border: none;
+    height: 25px;
+}
+
+ul.dropdown li * a:hover {
+/* Change color of links when hovered */
+    border: none;
+}
+
+/* Drop Down! */
+
+/* Hide all the dropdowns (submenus) */
+ul.dropdown ul,
+ul.dropdown li:hover ul ul,
+ul.dropdown ul li:hover ul ul
+{ display: none; }
+
+/* Display the submenus only when li are hovered */
+ul.dropdown li:hover ul,
+ul.dropdown ul li:hover ul ,
+ul.dropdown ul li ul li:hover ul{
+    display: block;
+}
+
+/*
+Menu stop
+*/

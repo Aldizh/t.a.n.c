@@ -1,0 +1,9 @@
+<div id="wrap">
+<h2 class="title">Please enter a valid email!</h2>
+<%= form_tag do %>
+      <%= text_field_tag 'email', nil, :placeholder => 'Email' %>
+      <%= submit_tag 'Continue' %>
+  <% end %>
+
+<%= link_to('Go back to the main login page', '/member/', :id => 'go_back_main_page') %>
+</div>

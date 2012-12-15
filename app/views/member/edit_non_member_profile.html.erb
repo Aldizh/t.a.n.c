@@ -1,0 +1,16 @@
+<div id="wrap">
+<h2 class="title">Please Edit the following information</h2>
+<p style="text-align: center; font-size: 10px; color: #600;"> <em>* Your first and last name are required. Rest are optional.</em> </p>
+<%= form_tag do %>
+  <%= text_field_tag 'first-name', @first, :placeholder => 'First Name' %>
+  <%= text_field_tag 'last-name', @last, :placeholder => 'Last Name' %>
+  <%= text_field_tag 'address-line-1', @address1, :placeholder => 'Address Line 1 (Optional)' %>
+  <%= text_field_tag 'address-line-2', @address2, :placeholder => 'Address Line 2 (Optional)' %>
+  <%= text_field_tag 'city', @city, :placeholder => 'City (Optional)' %>
+  <%= text_field_tag 'state', @state, :placeholder => 'State (Optional)' %>
+  <%= text_field_tag 'zip', @zip, :placeholder => 'Zip (Optional)' %>
+  <%= text_field_tag 'telephone', @telephone, :placeholder => 'Telephone (Optional)' %>
+  <%= recaptcha_tags %>
+  <%= submit_tag 'Submit' %>
+  <% end %>
+</div>

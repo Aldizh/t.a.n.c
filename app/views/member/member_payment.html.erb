@@ -1,0 +1,23 @@
+<div id="wrap">
+	<h3>Please set up your payment information</h3>
+	<p style ="text-align: center; font-size: 12px;"><em>Membership fee is only $25 for the whole year.</em> </p>
+
+	<div class="payment_options" id="online_payment">
+		<p> We highly encourage you to pay your membership fee online. You can use any of your cards (VISA, MASTER, AMEX or DISCOVER). It is very convenient and secure.</p>
+   		<%= form_tag do %>
+		<%= submit_tag 'Online Payment' %>
+ 		<% end %>
+	</div>
+	<div class="payment_options" id="check_cash">
+		<p> We also accept cash and check. Please mail your check to the address below or drop by on the adress below if you wanna drop cash or check:</p>
+   		<%= form_tag do %> 
+		<%= submit_tag 'Check or Cash' %>
+                <% end %>
+	</div>
+	<div class="payment_options" id="not_paying">
+		<p> Although you can sign up for membership without paying but we highly encourage you to pay your membership fee.</p>
+   		<%= form_tag do %>
+		<%= submit_tag 'Not Paying!' %>
+ 		<% end %>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div id="wrap">
+<h2 class="title">Welcome to TANC</h2>
+<%= form_tag do %>
+  <%= text_field_tag 'email', @email, :placeholder => 'Email', :disabled => true %>
+  <%= password_field_tag 'password', nil, :placeholder => 'Password' %>
+  <%= password_field_tag 'confirm-password', nil, :placeholder => 'Confirm Password' %>
+  <p> Who are you? </p>
+  <p>
+    <%= radio_button_tag 'membership', 'tibetan' , :selected => true %>
+    <%= label_tag 'tibetan', 'Tibetan' %>
+  </p>
+  <p>
+    <%= radio_button_tag 'membership', 'spouseoftibetan' %>
+    <%= label_tag 'spouseoftibetan', 'Spouse of Tibetan' %>
+  </p>
+  <p>
+    <%= radio_button_tag 'membership', 'non-member' %>
+    <%= label_tag 'non-member', 'Friend of TANC' %>
+  </p>
+  <%= recaptcha_tags %>
+  <%= submit_tag 'Continue' %>
+  <% end %>
+</div>
+
+

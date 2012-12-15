@@ -1,0 +1,72 @@
+
+<h2> Details about <%= @data[:first] %> </h2>
+<%= link_to 'Edit', edit_member_path(@member), :id => "edit_profile" %><br>
+<%= link_to '<<< Go back to Database Management Page', 'admin' %>
+
+<ul id="show_page_member_info">
+  <% if @data[:status] == "Pending" %>
+     <li style ="background: yellow;"><strong>Status:</strong> <%= @data[:status] rescue nil %></li>
+  <% elsif @data[:status] == "Active" %>
+     <li style ="background: green;"><strong>Status:</strong> <%= @data[:status] rescue nil %></li>
+  <% elsif @data[:status] == "Expired" %>
+      <li style ="background: red;"><strong>Status:</strong> <%= @data[:status] rescue nil %></li>
+  <% end %>
+  
+  <li><strong>Full Name:</strong> <%= @data[:first] + ' ' + @data[:last] rescue nil%> </li>
+  <li><strong>Membership Type:</strong> <%= @data[:type] rescue nil%></li>
+  <li><strong>Email:</strong> <%= @data[:email] rescue nil%></li>
+  <li><% if @data[:gender] == nil %>
+        <strong>Gender:</strong> <%= "N/A" %>
+      <% else %>
+        <strong>Gender:</strong> <%= @data[:gender] %>
+      <% end %></li>
+  <li><% if @data[:telephone] == nil %>
+        <strong>Telephone No:</strong> <%= "N/A" %>
+      <% else %>
+        <strong>Telephone No:</strong> <%= @data[:telephone] %>
+      <% end %></li>
+  <li><% if @data[:address1] == nil %> 
+        <strong>Street Address:</strong> <%= "N/A" %>
+      <% else %>
+        <strong>Street Address:</strong> <%= @data[:address1] %>, <%= @data[:address2] rescue nil%>
+      <% end %></li>
+  <li><% if @data[:city] == nil %>
+        <strong>City:</strong> <%= "N/A" %>
+      <% else %>
+        <strong>City:</strong> <%= @data[:city] %>
+      <% end %></li>
+  <li><% if @data[:state] == nil %>
+        <strong>State:</strong> <%= "N/A" %>
+      <% else %>
+        <strong>State:</strong> <%= @data[:state] %>
+      <% end %></li>
+  <li><% if @data[:zip] == nil %>
+        <strong>Zip:</strong>  <%= "N/A" %>
+      <% else %>
+        <strong>Zip:</strong> <%= @data[:zip] %>
+      <% end %></li>
+  <li><% if @data[:year_of_birth] == nil %>
+        <strong>Year of Birth:</strong> <%= "N/A" %>
+      <% else %>
+        <strong>Year of Birth:</strong> <%= @data[:year_of_birth] %>
+      <% end %></li>
+  <li><% if @data[:country_of_birth] == nil %>
+        <strong>Country of Birth:</strong> <%= "N/A" %>
+      <% else %>
+        <strong>Country of Birth:</strong> <%= @data[:country_of_birth] %>
+      <% end %></li>
+  <li><% if @data[:number_of_children] == nil %>
+        <strong>Number of Children:</strong> 
+        <%= "N/A" %>
+      <% else %>
+        <strong>Number of Children</strong>: <%= @data[:number_of_children] %>
+      <% end %></li>
+  <li><% if @data[:occupation] == nil %>
+        <strong>Occupation:</strong> 
+        <%= "N/A" %>
+      <% else %>
+        <strong>Occupation</strong>: <%= @data[:occupation] %>
+      <% end %></li>
+</ul>
+<%= button_to 'Delete', member_path(@member.id), :method => :delete, :confirm => 'Are you sure?' %>
+

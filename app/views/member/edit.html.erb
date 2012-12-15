@@ -1,0 +1,34 @@
+<% # edit.html.erb using partial %>
+<div id="wrap">
+<h2> You are now editing <%= @first %>'s info </h2>
+<%= form_tag  do %>
+  <%= label_tag 'status', 'Status' %>
+  <%= select_tag 'Status', options_for_select(["Pending", "Active", "Expired"], @status.to_s) %>
+  <br>
+  <br>
+  <%= label_tag 'member_type', 'Membership type' %>
+  <%= select_tag 'member_type', options_for_select(["tibetan", "spouseoftibetan", "non_member"], @type.to_s) %>
+  <br>
+  <br>
+  <%=  text_field_tag 'first', @first, :placeholder => 'First Name', :id => "first"%>
+  <%=  text_field_tag 'last', @last, :placeholder => 'Last Name', :id => "last"%>
+  <%=  text_field_tag 'telephone', @telephone, :placeholder => 'Telephone', :id => "telephone"%>
+  <%=  text_field_tag 'address1', @address1, :placeholder => 'Address Line 1 (Street)', :id => "address1"%>
+  <%=  text_field_tag 'address2', @address2, :placeholder => 'Address Line 2 (Apt/Suite)', :id => "address2"%>
+  <%=  text_field_tag 'city', @city, :placeholder => 'City', :id => "city"%>
+  <%=  text_field_tag 'state', @state, :placeholder => 'State', :id => "state" %>
+  <%=  text_field_tag 'zip', @zip, :placeholder => 'Zip', :id => "zip"%>
+  <%= label_tag 'gender', 'Gender'%>
+  <%= select_tag 'gender', options_for_select(["Male", "Female"], @gender.to_s) %>
+  <%=  text_field :member, 'year_of_birth', :placeholder => 'Birth Year', :id =>"year_of_birth"%>
+  <%=  text_field :member, 'country_of_birth', :placeholder => 'Country of Birth', :id =>"country_of_birth" %>
+  <%= label_tag 'number_of_children', 'Number of Children', :id =>"number_of_children" %>
+  <%= select_tag 'number_of_children', options_for_select(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], @number_of_children.to_s) %>
+  <br><br>
+  <%= label_tag 'occupation', 'Occupation', :id => "occupation" %>
+  <%= select_tag 'occupation', options_for_select(["Student", "Medical Profession", "Business Owner", "Finance and Banking", "Others"], @occupation.to_s) %>
+  <br>
+  <br>
+  <%= submit_tag 'Update Info' %>
+<% end %>
+</div>
